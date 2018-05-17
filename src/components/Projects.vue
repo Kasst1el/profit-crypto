@@ -1,12 +1,12 @@
 <template>
-	<div class="main">
-        technologies
-    </div>
+	<div class="projects">
+     projects   
+  </div>
 </template>
 
 <script>
   export default {
-    name: 'Main'
+    name: 'Projects'
   }
 </script>
 

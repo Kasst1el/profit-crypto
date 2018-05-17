@@ -159,6 +159,7 @@
     color: #fff;    
     text-transform: uppercase;
     text-decoration: none;
+    cursor: pointer;
   }
   .header__lang:first-child {
     padding-right: 0.5em;

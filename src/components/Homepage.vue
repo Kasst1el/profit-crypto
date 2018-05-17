@@ -22,14 +22,14 @@
             <div class="menu-icon__item"></div>
           </div>
           <nav class="nav header__nav">
-            <router-link to="/technologies" class="nav__a">технологии</router-link>              
-            <router-link to="/" class="nav__a">проекты</router-link>   
+            <router-link to="/technologies" class="nav__a" >{{ $t("message.technologies") }}</router-link>              
+            <router-link to="/projects" class="nav__a">{{ $t("message.projects") }}</router-link>   
           </nav>
         </div> 
         <div class="grid__col header__item">
-          <a href="/ru" class="header__lang">Ru</a>
+         <a class='header__lang' v-on:click="switchLocaleToRu()">ru</a>
           /
-          <a href="/en" class="header__lang">En</a>
+         <a class='header__lang' v-on:click="switchLocaleToEn()">en</a>
         </div>      
       </div>
     </header>
@@ -38,18 +38,35 @@
       <input type="text" class="input form__input">
       <input type="text" class="input form__input">
       <button type="submit" class="button form__button">
-        отправить заявку
+        {{ $t("message.send_an_application") }}
       </button>
-    </form>
-    
+    </form>    
   </div> 
 </template>
 
 <script>
+
+
+
   export default {
     name: 'Homepage',
     template: '<Homepage/>',
+    methods: {
+      switchLocaleToRu: function(){
+        this.$i18n.locale = 'ru'
+      },
+      switchLocaleToEn: function(){
+        this.$i18n.locale = 'en'
+      }
+    }
   }
+  // switchLocale(){
+  //   if (this.$i18n.locale === 'ru') {
+  //     this.$i18n.locale = 'en'
+  //   } else {
+  //     this.$i18n.locale = 'ru'
+  //   }
+  // }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
