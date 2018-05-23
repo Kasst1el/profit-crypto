@@ -1,10 +1,10 @@
 <template>
-	<div class="main">
+	<section class="main section">
       <div class="main__wrap">
         <h1 class="main__h1"></Разработка бизнес ~ решений<br>на базе blockchain\></h1>
         <h5 class="main__desc">Заполните чек-лист и мы сможем<br>проконсультировать Вас по Вашему проекту</h5>
       </div>      
-    </div>
+    </section>
 </template>
 
 <script>

@@ -1,7 +1,9 @@
 <template>
-	<div class="projects">
-     projects   
-  </div>
+	<section class="projects section">
+     <div class="section__wrap">
+     	Projects
+     </div>
+  </section>
 </template>
 
 <script>

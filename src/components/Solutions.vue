@@ -1,14 +1,14 @@
 <template>
-	<section class="main section">
-		<div class="section__wrap">
-			Our Technologies
-		</div>        
-    </section>
+	<section class="projects section">
+     <div class="section__wrap">
+     	Solutions
+     </div>
+  </section>
 </template>
 
 <script>
   export default {
-    name: 'Technologies'
+    name: 'Solutions'
   }
 </script>
 

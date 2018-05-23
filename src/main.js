@@ -14,14 +14,16 @@ const messages = {
     message: {       
       technologies: 'technologies',
       projects: 'projects',
-      send_an_application: 'send an application'       
+      send_an_application: 'send an application',
+      send: 'send'         
     }   
   },   
   ru: {     
     message: {       
       technologies: 'технологии',
       projects: 'проекты',
-      send_an_application: 'отправить заявку'     
+      send_an_application: 'отправить заявку',
+      send: 'отправить'     
     }   
   } 
 }
@@ -39,6 +41,59 @@ new Vue({
   components: { App },
   template: '<App/>',
 })
+
+
+
+var menuOpened = false,
+    menuAnimation = true;
+$('.menu-icon').click(function(){
+  
+  if(menuAnimation){
+    menuAnimation = false;
+    if(!menuOpened){
+      $('body').addClass('is-menu');
+      menuOpened = true;
+      $('.header .header__item').removeClass('is-active');
+    } else {
+      $('body').addClass('is-menu_close');
+
+      setTimeout(function(){
+        $('.header .logo').addClass('is-active');
+      }, 470);
+
+      setTimeout(function(){
+        $('.header .header__item_menu').addClass('is-active');
+      }, 540);
+
+      setTimeout(function(){
+        $('.header .header__item_lang').addClass('is-active');
+      }, 680);
+
+      setTimeout(function(){
+        $('body').removeClass('is-menu_close is-menu');
+      }, 750);
+
+      menuOpened = false;
+    }
+    setTimeout(function(){
+      menuAnimation = true;
+    }, 750);
+  }  
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
